@@ -2,11 +2,14 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Research1 | Cybersecurity Research Tracker</title><style>
 :root{--ink:#18251f;--muted:#66736c;--line:#e1e8e3;--green:#176b4b;--pale:#edf6f0;--paper:#f6f8f5;--white:#fff}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Noto Sans Sinhala",sans-serif}header{background:#123c30;color:white;padding:30px max(22px,calc((100vw - 1000px)/2)) 26px}header h1{font-size:clamp(24px,4vw,34px);margin:0 0 4px}header p{margin:0;color:#c8ddd1}main{max-width:1000px;margin:24px auto;padding:0 20px}.progress{background:white;border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:18px}.row{display:flex;align-items:center;justify-content:space-between;gap:12px}.count{font-weight:700;color:var(--green)}.bar{height:9px;background:#e8eee9;border-radius:9px;margin-top:12px;overflow:hidden}.fill{height:100%;background:#318461;width:0;transition:width .2s}.phase{margin:24px 0 10px;display:flex;align-items:baseline;gap:10px}.phase h2{font-size:19px;margin:0}.phase small{color:var(--muted)}.card{background:white;border:1px solid var(--line);border-radius:12px;margin:9px 0;overflow:hidden}.head{display:flex;align-items:center;gap:13px;padding:15px 17px;cursor:pointer}.check{width:23px;height:23px;accent-color:var(--green);flex:none}.title{font-weight:680;flex:1}.mark{font-size:12px;color:var(--green);background:var(--pale);padding:3px 9px;border-radius:20px}.detail{border-top:1px solid var(--line);padding:15px 18px 18px 54px;color:#34443b}.detail ul{padding-left:20px;margin:5px 0 15px}.detail li{margin:5px 0}.detail h3{font-size:14px;margin:13px 0 6px}.log{display:grid;grid-template-columns:1fr 1fr;gap:8px}.log textarea{border:1px solid var(--line);border-radius:8px;padding:9px;font:inherit;min-height:68px;resize:vertical}.log button,.clear{border:0;border-radius:8px;background:var(--green);color:white;padding:9px 13px;font:inherit;cursor:pointer}.saved{font-size:13px;color:var(--green);align-self:center}.hint{font-size:13px;color:var(--muted);margin:16px 2px}footer{color:var(--muted);font-size:13px;margin:26px 0}.next{color:var(--green);font-weight:650}.hidden{display:none}@media(max-width:600px){.head{padding:13px}.detail{padding:13px 14px}.log{grid-template-columns:1fr}.mark{font-size:11px}}
 
-summary{cursor:pointer;font-weight:650;padding:12px 0}article{padding:0 16px}.steps label{display:flex;gap:10px;margin:10px 0}.notes{display:grid;gap:8px;margin:16px 0}.notes textarea{display:block;width:100%;min-height:55px;font:inherit;border:1px solid var(--line);border-radius:8px;padding:8px}input{accent-color:var(--green)}.complete{display:block;margin:16px 0}.meta{color:var(--muted)}</style></head>
+summary{cursor:pointer;font-weight:650;padding:12px 0}article{padding:0 16px}.steps label{display:flex;gap:10px;margin:10px 0}.notes{display:grid;gap:8px;margin:16px 0}.notes textarea{display:block;width:100%;min-height:55px;font:inherit;border:1px solid var(--line);border-radius:8px;padding:8px}input{accent-color:var(--green)}.complete{display:block;margin:16px 0}.meta{color:var(--muted)}
+:root{color-scheme:dark;--ink:#e9f1ff;--muted:#a5b6ce;--line:#334761;--green:#77ead1;--paper:#0b1323;--white:#142137}header{background:linear-gradient(115deg,#142744,#193d51);border-bottom:1px solid var(--line)}.card,.progress{background:var(--white)}.bar{background:#263b55}.fill{background:linear-gradient(90deg,#79a9ff,#77ead1)}.dates{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px;margin:12px 0}.dates label{display:grid!important;gap:4px;font-size:13px;color:var(--muted);margin:0!important}.dates input{width:100%;padding:7px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font:inherit}.steps .subtask{padding:12px 0;border-top:1px solid var(--line)}.translation{display:block;color:var(--muted);font-size:14px}.notes textarea{background:var(--paper);color:var(--ink)}.schedule-status{color:var(--green);font-size:13px}
+</style></head>
 <body><header><h1>Research1</h1><p>Cybersecurity Research Tracker</p></header>
 <main><section class="progress"><strong id="progress" aria-live="polite"></strong><div class="bar"><div class="fill" id="fill"></div></div></section><p class="hint">Progress and notes are saved in this browser.</p><div id="tasks"></div><p id="status" role="status"></p></main>
 <script>
 const tasks = [["Define the research problem","Identify the system, security problem, and affected users","Write a one-sentence problem statement","Agree on the scope with your supervisor"],["Review prior work","Search for relevant peer-reviewed papers","Compare datasets, methods, metrics, and limitations","Identify a research gap supported by citations"],["Set the question and objectives","Write one answerable research question","Define measurable objectives and success criteria","Record assumptions and exclusions"],["Submit the proposal","Describe the method, deliverables, resources, and timeline","Include ethics and references","Check the 1,500-word limit and submit"],["Complete ethics and authorization","Confirm the review route with your supervisor","Document data handling and authorized systems","Obtain required approval before collecting data or starting participant work"],["Draft the midpoint report","Write the introduction, literature review, and gap","Describe the methodology, dataset, baseline, and metrics","Check citations against the reference list"],["Submit the midpoint report","Show preliminary work and document limitations","Add the cover sheet, abstract, and remaining work plan","Record supervisor feedback and submit"],["Design the evaluation","Define the threat model and scope","Select a defensive baseline, metrics, and dataset","Document versions and reproducibility steps"],["Run the study","Evaluate defensive controls or analyze the approved dataset","Record configurations, observations, and results","Compare with the baseline and discuss limitations"],["Write the dissertation","Update the literature review and methodology","Present results, evidence, and critical evaluation","Answer the research question and write the abstract"],["Submit the dissertation","Check references, figures, and formatting","Add supervisor approval and meeting logs","Submit and save the receipt"],["Prepare the presentation","Explain the problem, method, and findings","Rehearse the demonstration and timing","Prepare answers about validity and limitations"]];
+const instructions = [["අධ්‍යයනය කරන පද්ධතිය, ආරක්ෂක ගැටලුව සහ බලපෑමට ලක්වන පිරිස නම් කරන්න.","ගැටලුව සහ එහි බලපෑම එක වාක්‍යයකින් ලියන්න.","අධ්‍යයනයට ඇතුළත් සහ බැහැර දේ උපදේශකයා සමඟ තීරණය කරන්න."],["මාතෘකාවට අදාළ සම සමාලෝචිත ලිපි සොයන්න.","දත්ත කට්ටල, ක්‍රම, මිනුම් සහ සීමා වගුවක සසඳන්න.","තවම විසඳී නැති ගැටලුව අදාළ මූලාශ්‍ර සමඟ සඳහන් කරන්න."],["අධ්‍යයනයෙන් පිළිතුරු දිය හැකි එක් ප්‍රශ්නයක් ලියන්න.","මැනිය හැකි අරමුණු සහ සාර්ථකත්ව මිනුම් තීරණය කරන්න.","උපකල්පන සහ අධ්‍යයනයෙන් බැහැර දේ ලියන්න."],["ක්‍රමය, භාර දෙන දේ, සම්පත් සහ කාලසටහන ලියන්න.","ආචාරධර්ම සහ මූලාශ්‍ර ඇතුළත් කරන්න.","වචන 1,500 සීමාව පරීක්ෂා කර යෝජනාව භාර දෙන්න."],["අදාළ ආචාරධර්ම සමාලෝචන ක්‍රමය උපදේශකයා සමඟ තහවුරු කරන්න.","දත්ත රැකගන්නා ක්‍රමය සහ අවසර ඇති පද්ධති ලියන්න.","දත්ත රැස් කිරීමට හෝ සහභාගීවන්නන් සමඟ වැඩ කිරීමට පෙර අවශ්‍ය අනුමැතිය ගන්න."],["හැඳින්වීම, පෙර පර්යේෂණ සහ පර්යේෂණ හිඩැස ලියන්න.","ක්‍රමවේදය, දත්ත, සංසන්දන පදනම සහ මිනුම් විස්තර කරන්න.","පාඨයේ යොමු මූලාශ්‍ර ලැයිස්තුව සමඟ සසඳන්න."],["මුල් ප්‍රතිඵල සහ දැනට ඇති සීමා පෙන්වන්න.","මුල් පිටුව, සාරාංශය සහ ඉතිරි වැඩ සැලැස්ම එක් කරන්න.","උපදේශක අදහස් සටහන් කර වාර්තාව භාර දෙන්න."],["තර්ජන ආකෘතිය සහ ඇගයීමේ විෂය පථය ලියන්න.","ආරක්ෂක සංසන්දන පදනම, මිනුම් සහ දත්ත තෝරන්න.","මෙවලම් අනුවාද සහ ඇගයීම නැවත කළ හැකි පියවර සටහන් කරන්න."],["ආරක්ෂක පාලන ඇගයීම හෝ අනුමත දත්ත විශ්ලේෂණය කරන්න.","සැකසුම්, නිරීක්ෂණ සහ ප්‍රතිඵල සටහන් කරන්න.","සංසන්දන පදනමට සාපේක්ෂව ප්‍රතිඵල සහ සීමා පැහැදිලි කරන්න."],["පෙර පර්යේෂණ සමාලෝචනය සහ ක්‍රමවේදය යාවත්කාලීන කරන්න.","ප්‍රතිඵල, සාක්ෂි සහ විවේචනාත්මක ඇගයීම ලියන්න.","පර්යේෂණ ප්‍රශ්නයට පිළිතුරු දී සාරාංශය ලියන්න."],["මූලාශ්‍ර, රූප සහ වාර්තා ආකෘතිය පරීක්ෂා කරන්න.","උපදේශක අනුමැතිය සහ රැස්වීම් සටහන් එක් කරන්න.","වාර්තාව භාර දී ලැබුණු තහවුරුව තබාගන්න."],["ගැටලුව, ක්‍රමය සහ ප්‍රතිඵල පැහැදිලි කරන විනිවිදක හදන්න.","ඉදිරිපත් කිරීම සහ ප්‍රදර්ශනය නියමිත වේලාවට පුහුණු කරන්න.","ප්‍රතිඵලවල වලංගුභාවය සහ සීමා ගැන පිළිතුරු සූදානම් කරන්න."]];
 const phases = [
   { title: 'Proposal', weight: 20, start: 0, end: 4 },
   { title: 'Ethics and Midpoint', weight: 20, start: 4, end: 7 },
@@ -29,6 +32,33 @@ function save() {
   progress.textContent = done + ' / 12 tasks complete · ' + steps + ' / 36 steps complete';
   document.querySelector('#fill').style.width = (100 * done / tasks.length) + '%';
 }
+function dateFields(record, isComplete) {
+  const group = document.createElement('div');
+  group.className = 'dates';
+  const status = document.createElement('span');
+  status.className = 'schedule-status';
+  function refresh() {
+    const now = new Date();
+    const today = [now.getFullYear(), String(now.getMonth()+1).padStart(2,'0'), String(now.getDate()).padStart(2,'0')].join('-');
+    status.textContent = isComplete() ? 'Complete' : record.target && record.target < today ? 'Past expected date' : record.target === today ? 'Expected today' : '';
+  }
+  for (const [field, caption] of [['start','Start date'],['target','Expected completion'],['close','Actual close date']]) {
+    const label = document.createElement('label');
+    const input = document.createElement('input');
+    input.type = 'date';
+    input.value = record[field] || '';
+    input.addEventListener('change', () => {
+      record[field] = input.value;
+      refresh();
+      save();
+    });
+    label.append(caption, input);
+    group.append(label);
+  }
+  group.append(status);
+  refresh();
+  return { group, refresh };
+}
 for (const phase of phases) {
   const section = document.createElement('section');
   section.innerHTML = '<div class="phase"><h2>' + phase.title + '</h2><small>' + phase.weight + '% of module</small></div>';
@@ -36,11 +66,15 @@ for (const phase of phases) {
     const [title, ...steps] = tasks[i];
     const entry = state['t' + (i + 1)] ??= {};
     entry.steps ??= {};
+    entry.dates ??= {};
+    entry.stepDates ??= {};
     const card = document.createElement('article');
     card.className = 'card';
     card.innerHTML = '<details><summary>' + (i + 1) + '. ' + title + '</summary><p class="meta">' + rubric[i] +
       '</p><div class="steps"></div><div class="notes"></div><label class="complete"><input type="checkbox"> Mark task complete</label></details>';
     card.querySelector('details').open = i === tasks.findIndex((_, j) => !state['t' + (j + 1)]?.done);
+    const taskDates = dateFields(entry.dates, () => entry.done);
+    card.querySelector('.steps').before(taskDates.group);
     steps.forEach((step, index) => {
       const label = document.createElement('label');
       const input = document.createElement('input');
@@ -48,10 +82,21 @@ for (const phase of phases) {
       input.checked = Boolean(entry.steps[index]);
       input.addEventListener('change', () => {
         entry.steps[index] = input.checked;
+        stepDates.refresh();
         save();
       });
-      label.append(input, step);
-      card.querySelector('.steps').append(label);
+      const text = document.createElement('span');
+      const translation = document.createElement('span');
+      translation.className = 'translation';
+      translation.lang = 'si';
+      translation.textContent = '(' + instructions[i][index] + ')';
+      text.append(step, translation);
+      label.append(input, text);
+      const row = document.createElement('div');
+      row.className = 'subtask';
+      const stepDates = dateFields(entry.stepDates[index] ??= {}, () => entry.steps[index]);
+      row.append(label, stepDates.group);
+      card.querySelector('.steps').append(row);
     });
     for (const [field, caption] of [['work','Work completed'],['evidence','Evidence or reference'],['next','Next action or blocker']]) {
       const label = document.createElement('label');
@@ -68,6 +113,7 @@ for (const phase of phases) {
     complete.checked = Boolean(entry.done);
     complete.addEventListener('change', () => {
       entry.done = complete.checked;
+      taskDates.refresh();
       save();
     });
     section.append(card);
